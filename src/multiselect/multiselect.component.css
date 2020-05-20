@@ -123,3 +123,8 @@ li.groupChildEle {
 .icon_down_dir:before { 
   content: '\e803'; 
 }
+
+img {
+  max-height: 75px;
+  max-width: 100px;
+}
