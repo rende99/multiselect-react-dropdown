@@ -150,10 +150,11 @@ export class Multiselect extends React.Component {
   }
 
   onChange(event) {
+    const { onChange } = this.props;
     this.setState(
       { inputValue: event.target.value }, () => {
+        onChange(event.target.value);
         this.filterOptionsByInput;
-        this.props.onChange(event.target.value)
       }
     );
   }
