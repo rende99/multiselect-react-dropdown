@@ -150,10 +150,14 @@ export class Multiselect extends React.Component {
   }
 
   onChange(event) {
+    const { onChangeInput } = this.props;
     this.setState(
-      { inputValue: event.target.value },
-      this.filterOptionsByInput
+      { inputValue: event.target.value }, () => {
+        this.filterOptionsByInput();
+        onChangeInput(event.target.value);
+      }
     );
+
   }
 
   filterOptionsByInput() {
@@ -469,6 +473,7 @@ Multiselect.defaultProps = {
 	emptyRecordMsg: "No Options Available",
 	onSelect: () => {},
   onRemove: () => {},
+  onChangeInput: () => {},
   closeIcon: 'circle2',
   singleSelect: false,
   caseSensitiveSearch: false,
