@@ -153,7 +153,7 @@ export class Multiselect extends React.Component {
     const { onChangeInput } = this.props;
     this.setState(
       { inputValue: event.target.value }, () => {
-        this.filterOptionsByInput;
+        this.filterOptionsByInput();
         onChangeInput(event.target.value);
       }
     );
