@@ -330,7 +330,7 @@ export class Multiselect extends React.Component {
   }
 
   renderNormalOption() {
-    const { isObject = false, displayValue, showCheckbox, style, singleSelect } = this.props;
+    const { isObject = false, displayValue, imageValue, showCheckbox, style, singleSelect } = this.props;
     const { highlightOption } = this.state;
     return this.state.options.map((option, i) => (
       <li
@@ -465,6 +465,7 @@ Multiselect.defaultProps = {
   selectedValues: [],
   isObject: true,
   displayValue: "model",
+  imageValue: "cover",
   showCheckbox: false,
   selectionLimit: -1,
   placeholder: "Select",
