@@ -151,6 +151,7 @@ export class Multiselect extends React.Component {
 
   async onChange(event) {
     const { onChangeInput } = this.props;
+    event.persist();
     await onChangeInput(event.target.value);
     this.setState(
       { inputValue: event.target.value },
