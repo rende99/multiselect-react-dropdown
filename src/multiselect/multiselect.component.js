@@ -350,7 +350,7 @@ export class Multiselect extends React.Component {
           />
         )}
         {isObject ? option[displayValue] : (option || '').toString()}
-        {isObject ? option[imageValue]: (option || '').toString()}
+        {isObject ? <img src={option[imageValue]}></img>: (option || '').toString()}
       </li>
     ));
   }
