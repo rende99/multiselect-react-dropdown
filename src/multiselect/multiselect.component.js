@@ -149,13 +149,12 @@ export class Multiselect extends React.Component {
     this.setState({ groupedObject });
   }
 
-  onChange(event) {
+  async onChange(event) {
     const { onChangeInput } = this.props;
-    onChangeInput(event.target.value);
+    await onChangeInput(event.target.value);
     this.setState(
-      { inputValue: event.target.value }, () => {
-        this.filterOptionsByInput;
-      }
+      { inputValue: event.target.value },
+        this.filterOptionsByInput
     );
 
   }
