@@ -472,7 +472,7 @@ Multiselect.defaultProps = {
 	emptyRecordMsg: "No Options Available",
 	onSelect: () => {},
   onRemove: () => {},
-  onChangeInput: () => {console.log("default")},
+  onChangeInput: () => {},
   closeIcon: 'circle2',
   singleSelect: false,
   caseSensitiveSearch: false,
